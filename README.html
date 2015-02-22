@@ -61,9 +61,26 @@ img {
 
 
 
-<div id="gettingandcleaningdata" class="section level1">
-<h1>gettingandcleaningdata</h1>
-<p>Repository use for course project in Getting And Cleaning Data.</p>
+<div id="getting-and-cleaning-data" class="section level1">
+<h1>Getting and Cleaning Data</h1>
+<p>Repository use for course project in Getting And Cleaning Data. Below, a description of how run_analysis.R works is provided.</p>
+</div>
+<div id="descriptin-of-run_analysis.r" class="section level1">
+<h1>Descriptin of run_analysis.R</h1>
+<p>For the course project, the file run_analysis.R was created. The file produces a tidy data set from a collection of raw data files taken from the “Human Activity Recognition Using Smartphones Dataset Version 1.0” by [1] Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012.</p>
+<p>The data use for the project is available here:</p>
+<p><a href="https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip">https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip</a></p>
+<p>Note, the file run_analysis.R must be placed inside the UCI HAR Dataset folder once the file is unzipped as it uses relative paths to load files.</p>
+<p>The general work flow of the run_analysis.R script is as follows:</p>
+<ul>
+<li>Load the training set files using the read.table function.</li>
+<li>Combine each dataset into a larger training set data frame.</li>
+<li>Load the testing set files using the read.table function.</li>
+<li>Combine each dataset into a larger testing set data frame.</li>
+<li>Use the merge function to combine both training and testing sets into one</li>
+<li>Use melt and dcast functions to find the mean of each variable with respect to subject_id and activity_label</li>
+<li>Write out the final tidy data set to a text file</li>
+</ul>
 </div>
 
 
